@@ -1,7 +1,5 @@
 import React, { useMemo } from "react";
 import { useTable, usePagination, useGlobalFilter } from "react-table";
-import GlobalFilter from "./GlobalFilter";
-import Pagination from "./Pagination";
 import CustomTable from "./CustomTable";
 import makeData from "./makeData";
 
@@ -53,10 +51,6 @@ function TableComponent() {
 
   return (
     <>
-      <GlobalFilter
-        globalFilter={globalFilter}
-        setGlobalFilter={setGlobalFilter}
-      />
       <CustomTable
         columns={columns}
         data={data}
@@ -72,18 +66,6 @@ function TableComponent() {
         nextPage={nextPage}
         pageCount={pageCount}
         pageOptions={pageOptions}
-      />
-      <Pagination
-        gotoPage={gotoPage}
-        previousPage={previousPage}
-        nextPage={nextPage}
-        canPreviousPage={canPreviousPage}
-        canNextPage={canNextPage}
-        pageCount={pageCount}
-        pageIndex={pageIndex}
-        pageOptions={pageOptions}
-        setPageSize={setPageSize}
-        pageSize={pageSize}
       />
     </>
   );
