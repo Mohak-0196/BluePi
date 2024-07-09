@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Text, Box } from "@chakra-ui/react";
+import TableComponent from "./components/Table";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box textAlign="center" mt={5}>
+      <Text
+        as="h1"
+        fontSize="3xl"
+        textAlign="center"
+        textDecoration="underline"
+      >
+        Table Using Chakra-UI
+      </Text>
+      <TableComponent />
+    </Box>
   );
-}
+};
 
 export default App;
